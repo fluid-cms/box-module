@@ -1,0 +1,2 @@
+INSERT INTO `core_setting` (`variable`, `value`, `default_value`, `type`, `description`, `options`) VALUES
+('box.edit.inline', '0', '0', 'select', 'Povolit úpravy boxů z webu', '{"0":"ne","1":"ano"}');

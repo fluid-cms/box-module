@@ -1,0 +1,11 @@
+{if $content !== null}
+    <div n:tag-if="$user->isAllowed('backend:box') && $box->editable && $inlineEnabled" contenteditable="false" id="box-{$box->name}">
+        {$content|noescape}
+    </div>
+{elseif $user->isAllowed('backend:box')}
+    <span class='text-danger'>
+        <i class='fa fa-warning'></i>
+        Box <b>{$name}</b> není definován
+        <a href="{plink :Admin:Box:edit $name}" target="_blank" class="btn btn-primary btn-xs">Vytvořit box</a>
+    </span>
+{/if}

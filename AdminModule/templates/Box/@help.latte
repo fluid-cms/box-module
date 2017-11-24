@@ -1,0 +1,43 @@
+<!-- Components Help -->
+<div class="modal fade" id="help" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Komponenty</h4>
+            </div>
+            <div class="modal-body">
+                <h4>K čemu slouží?</h4>
+                <p>
+                    Komponenty slouží pro vkládání dynamického obsahu (počet nejnovějších článků, slučování boxů, zobrazení důležitých novinek, atp.).<br />
+                    Jejich kompletní seznam najdete v naší <span data-toggle="tooltip" title="Na dokumentaci pracujeme" class="text-info">dokumentaci</span>.<br />
+                    <span class="text-info">Dostupné komponenty závisý na modulech, které máte nainstalovány.</span>
+                    <br /><br />
+                </p>
+                <h4>Jak je použít?</h4>
+                <p>
+                    Pro vložení komponenty do <b>Obsahu</b> použijte následující makro:<br />
+                </p>
+                <div class="well well-sm">
+                    <code>[%&lt;nazev&gt;(&lt;1parametr&gt;,&lt;2parametr&gt;,...)%]</code><br />
+                </div>
+                <ul>
+                    <li>
+                        <b>&lt;nazev&gt;</b> nahraďte za vámi zvolenou komponentu ze seznamu níže.
+                    </li>
+                    <li>
+                        <b>&lt;1parametr&gt;,&lt;2parametr&gt;,...</b> - slouží pro individuální nastavení<br />
+                        a hodnoty se zapisují přesně v uvedeném pořadí za čárku
+                    </li>
+                </ul>
+                <h4 class="text-danger">Pozor!</h4>
+                <p>
+                    Pokud použijete tlačítko <a class="btn btn-xs btn-primary">Vložit</a>, nezapomeňte změnit názvy parametrů za hodnoty!
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Zavřít</button>
+            </div>
+        </div>
+    </div>
+</div>

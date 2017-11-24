@@ -1,0 +1,34 @@
+parameters:
+	controls:
+		box:
+			class: Grapesc\GrapeFluid\BoxModule\Control\BoxControlFactory
+			desc: 'Slouží pro vložení boxu'
+#				list: true # pokud je true zobrazí se v seznamu dostupných komponent, default je true
+			params:
+				name: [string, Jméno / Identifikátor boxu]
+
+	backend:
+		auth:
+			box: 'box'
+		menu:
+			Boxy:
+				order: 48
+				icon: 'cubes'
+				class: menu-warning
+				auth: '%backend.auth.box%'
+				link: ':Admin:Box:default'
+				selected:
+					- ':Admin:Box:.*'
+
+services:
+	- Grapesc\GrapeFluid\BoxModule\Model\BoxesModel
+	- Grapesc\GrapeFluid\BoxModule\BoxForm
+
+assets:
+	summer:
+		limit:
+			- ['link' = '*', 'auth' = 'backend:box', 'option' = 'box.edit.inline']
+
+latte:
+	macros:
+		- Grapesc\GrapeFluid\BoxModule\Control\BoxControlMacro::install

@@ -1,0 +1,21 @@
+{block content}
+
+    {include '@help.latte'}
+
+    <!-- Component List -->
+    {control componentList}
+
+    <h1 class="page-header">
+        {block title}{$new ? 'Nový box' : 'Úprava boxu'}{/block}
+        <span class="button-area">
+            <a href="#help" class="btn btn-info" data-toggle="modal"><i class="fa fa-info-circle"></i> Nápověda</a>
+        </span>
+    </h1>
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            {snippet boxControl}
+                {control boxForm}
+            {/snippet}
+        </div>
+    </div>
+{/block}

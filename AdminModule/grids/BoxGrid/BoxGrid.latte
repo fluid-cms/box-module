@@ -1,0 +1,59 @@
+{extends $defaultTemplate}
+
+{define body-cell-title}
+    <td>
+        {if $record->title}
+            {$record->title}
+        {else}
+            <span class="text-danger"><i class="fa fa-warning"></i> Neuveden</span>
+        {/if}
+    </td>
+{/define}
+
+{define header-cell-usage}
+    <th data-toggle="tooltip" class="text-info" title="Zkopírujte tento kód a vložte kamkoliv do jiného boxu pro jeho vložení"><i class="fa fa-info-circle"></i> Použití v CMS</th>
+{/define}
+
+{define body-cell-usage}
+    <td><code>[%box({$record->name})%]</code></td>
+{/define}
+
+{define header-cell-name}
+    <th data-toggle="tooltip" class="text-info" title="Slouží výhradně pro účely programátora"><i class="fa fa-info-circle"></i> Použití v kódu</th>
+{/define}
+
+{define body-cell-name}
+    <td><code>&#123;box {$record->name}&#125;</code></td>
+{/define}
+
+{define body-cell-note}
+    <td>
+        {$record->note|truncate:100}
+    </td>
+{/define}
+
+{define row-action-edit}
+    <a href="{$link}" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Upravit">
+        <i class="fa fa-pencil fa-fw"></i>
+    </a>
+{/define}
+
+{define row-action-disable}
+    <a href="{$link}" class="btn btn-xs {$record->disabled ? 'btn-danger' : 'btn-success'} tw-ajax" data-toggle="tooltip" title="{$record->disabled ? 'Zapnout' : 'Vypnout'}">
+        <i class="fa fa-power-off fa-fw"></i>
+    </a>
+{/define}
+
+{define row-action-editable}
+    <a href="{$link}" class="btn btn-xs {$record->editable ? 'btn-success' : 'btn-danger'} tw-ajax" data-toggle="tooltip" title="{$record->editable ? 'Úprava z webu - Vypnout' : 'Úprava z webu - Zapnout'}">
+        <i class="fa fa-paint-brush fa-fw"></i>
+    </a>
+{/define}
+
+{define row-action-delete}
+    {if !$record->base}
+        <a href="{$link}" class="btn btn-danger btn-xs tw-ajax" data-ajax="on" data-confirm="Opravdu chcete tento box smazat?" title="Smazat" data-toggle="tooltip">
+            <i class="fa fa-times fa-fw"></i>
+        </a>
+    {/if}
+{/define}

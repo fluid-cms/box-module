@@ -1,0 +1,15 @@
+{block content}
+    <h1 class="page-header">
+        {block title}Přehled boxů{/block}
+        <span class="button-area">
+            <a n:href=":Admin:Box:edit" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Vytvořit box</a>
+        </span>
+    </h1>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                {control boxGrid}
+            </div>
+        </div>
+    </div>
+{/block}

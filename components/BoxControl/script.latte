@@ -1,0 +1,18 @@
+{if $inlineEnabled && $box->editable && $user->isAllowed('backend:box')}
+    <script>
+        $(document).ready(function () {
+            var boxName = {$box->name};
+            var boxTitle = {$box->title};
+
+            $('#box-' + boxName).fluidNote({
+                title: "Úprava boxu - " + boxTitle,
+                basePath: {$basePath},
+                editLink: {plink :Admin:Box:edit $box->id},
+                editSignal: {link inlineEditBox!},
+                uploadSignal: {link uploadImage!},
+                inline: true,
+                unique: boxName
+            });
+        });
+    </script>
+{/if}
