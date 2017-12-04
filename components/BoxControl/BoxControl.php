@@ -80,7 +80,7 @@ class BoxControl extends BaseMagicControl
 	{
 		$presenter = $this->getPresenter();
 
-		if ($presenter->isAjax() && $presenter->getUser()->isAllowed('box')) {
+		if ($presenter->isAjax() && $presenter->getUser()->isAllowed('backend:box')) {
 			$box = $this->httpRequest->getPost("unique");
 			$content = Helper::createSafeEscapeString(Helper::magicMacroRecreator($this->httpRequest->getPost("content")));
 			$this->boxes->update(["content" => $content], $box, "name");
