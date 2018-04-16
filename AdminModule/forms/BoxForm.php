@@ -68,11 +68,6 @@ class BoxForm extends FluidForm
 			return;
 		}
 
-//		TODO: Pokud 'content' obsahuje obsah dalších komponent / boxů, je třeba ho odříznout a nahradit zpět magic makrem
-//		if (Helper::containsMagicMacros($values['content'])) {
-//			$values['editable'] = false;
-//		}
-
 		$id = null;
 
 		if ($values['id'] == "") {
