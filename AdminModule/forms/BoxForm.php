@@ -33,7 +33,7 @@ class BoxForm extends FluidForm
 			->addRule(Form::PATTERN, "Zadaný identifikátor je neplatný", "[a-z]{3,20}");
 
 		$form->addTextArea("content", "Obsah")
-			->setAttribute("class", "form-summernote");
+			->setAttribute("class", "form-summernote-extended");
 
 		$form->addTextArea("note", "Vaše poznámka");
 

@@ -3,7 +3,7 @@
     {include '@help.latte'}
 
     <!-- Component List -->
-    {control componentList}
+    {control componentList, true, ".form-summernote-extended"}
 
     <h1 class="page-header">
         {block title}{$new ? 'Nový box' : 'Úprava boxu'}{/block}
