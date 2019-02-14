@@ -25,6 +25,10 @@ services:
 	- Grapesc\GrapeFluid\BoxModule\BoxForm
 
 assets:
+	config:
+		options:
+			- Grapesc\GrapeFluid\BoxModule\BoxAssetOption
+
 	summer:
 		limit:
 			- ['link' = '*', 'auth' = 'backend:box', 'option' = 'box.edit.inline']
