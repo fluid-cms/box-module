@@ -58,7 +58,7 @@ class BoxForm extends FluidForm
 		parent::onSubmitEvent($control, $form);
 
 		$presenter = $control->getPresenter();
-		$values = $form->getValues(true);
+		$values = $form->getValues('array');
 
 		$box = $this->boxes->getBox($values['name']);
 

@@ -10,7 +10,7 @@ use Nette\Database\Table\ActiveRow;
 class BoxGrid extends FluidGrid
 {
 
-	protected function build()
+	protected function build(): void
 	{
 		$this->skipColumns(["content", "name", "disabled", "editable", "base"]);
 		$this->setSortableColumns(["title"]);
