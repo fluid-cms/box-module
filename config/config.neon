@@ -34,5 +34,5 @@ assets:
 			- ['link' = '*', 'auth' = 'backend:box', 'option' = 'box.edit.inline']
 
 latte:
-	macros:
-		- Grapesc\GrapeFluid\BoxModule\Control\BoxControlMacro::install
+	extensions:
+		- Grapesc\GrapeFluid\BoxModule\Control\BoxControlMacro
